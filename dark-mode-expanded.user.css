@@ -1,16 +1,16 @@
 /* ==UserStyle==
 @name           Epic Games - Dark Mode Expanded
 @namespace      github.com/blyad2137/epic-games-dark-mode-expanded
-@version        1.0.0
+@version        1.0.1
 @description    `Turns white to dark and so on.`
 @author         blyad(https://github.com/blyad2137)
 @license		CC BY-NC-SA 4.0
 @homepageURL	https://github.com/blyad2137/epic-games-dark-mode-expanded
 @supportURL		https://github.com/blyad2137/epic-games-dark-mode-expanded/issues
-@updateURL      https://userstyles.world/api/style/5340.user.css
+@updateURL		https://userstyles.world/api/style/5340.user.css
 ==/UserStyle== */
 
-@-moz-document domain("epicgames.com") {
+@-moz-document domain("epicgames.com"), domain("fallguys.com") {
 	:root {
 		--dark: #1b1b1b;
 		--dark-2: #1f1f1f;
@@ -328,5 +328,17 @@
 		background-size: 17px;
 		background-position-y: 61%;
 		background-position-x: 95%;
+	}
+	
+	/*FallGuys Site*/
+	[class*="CommonArticleDetail__ArticleDetailContent"] {
+		background-color: var(--dark);
+		color: var(--white-100);
+	}
+	[class*="TypographyHeading2"] .typography-rich-text, [class*="TypographyParagraph"] {
+		color: var(--white-100) !important;
+	}
+	[class*="Image__ImgWrapper"] {
+		border-color: var(--dark) !important;
 	}
 }
